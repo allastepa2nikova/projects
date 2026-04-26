@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnlyFuns — подбор смешного контента</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <h1>🤣 OnlyFuns</h1>
+        <p>Подбери смешной контент по любимым тематикам за пару кликов.</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="controls card">
+        <h2>Фильтры</h2>
+        <div class="grid">
+          <label>
+            Тематика
+            <select id="topicSelect"></select>
+          </label>
+          <label>
+            Формат
+            <select id="formatSelect">
+              <option value="all">Все</option>
+              <option value="Мем">Мем</option>
+              <option value="Видео">Видео</option>
+              <option value="Шутка">Шутка</option>
+              <option value="Комикс">Комикс</option>
+            </select>
+          </label>
+          <label>
+            Уровень абсурда
+            <input id="absurdityRange" type="range" min="1" max="5" value="3" />
+          </label>
+          <button id="pickBtn" class="primary">Подобрать контент</button>
+        </div>
+      </section>
+
+      <section id="result" class="card result empty">
+        <h2>Тут появится рекомендация</h2>
+        <p>Выбери параметры и нажми «Подобрать контент».</p>
+      </section>
+
+      <section class="card">
+        <h2>Популярные тематики</h2>
+        <div id="topics" class="chips"></div>
+      </section>
+    </main>
+
+    <footer class="container footer">Made with ☕ and jokes.</footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
